@@ -20,7 +20,7 @@
 }
 
 .row [class^="col-"] .col-3-of-4 {
-  width: calc(3*((100% - 3 * 1rem) / 4 )+ 2 * 1rem);
+  width: calc( 3 * ((100% - 3 * 1rem) / 4)+ 2 * 1rem);
 }
 
 *,
@@ -42,6 +42,9 @@ body {
   line-height: 1.6;
   font-family: 1.5rem;
   font-family: "Lato", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: #dbe2e9;
 }
 
 ul {
@@ -50,5 +53,82 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.navigation {
+  padding: 3rem;
+  -webkit-box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.15);
+}
+
+.navigation .container {
+  width: 85%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.btn--showForm {
+  margin-right: 2rem;
+  border-radius: 3rem;
+  padding: 1rem 1.5rem;
+  -webkit-box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+}
+
+.btn--showForm:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0.7rem rgba(183, 50, 37, 0.4);
+          box-shadow: 0 0 0.7rem rgba(183, 50, 37, 0.4);
+}
+
+.btn--showForm:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.btn--showForm:active {
+  -webkit-transform: translateY(-1.5px);
+          transform: translateY(-1.5px);
+}
+
+.btn--clearAll {
+  border-radius: 3rem;
+  padding: 1rem 1.5rem;
+  -webkit-box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.2;
+  transition: all 0.2;
+}
+
+.btn--clearAll:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0.7rem rgba(183, 50, 37, 0.4);
+          box-shadow: 0 0 0.7rem rgba(183, 50, 37, 0.4);
+}
+
+.btn--clearAll:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.btn--clearAll:active {
+  -webkit-transform: translateY(-1.5px);
+          transform: translateY(-1.5px);
 }
 /*# sourceMappingURL=app.css.map */
