@@ -11,11 +11,87 @@
     <!-- Navigation -->
     <div class="navigation">
       <div class="container">
-        <button class="btn btn--showForm">Show Form</button>
+        <!-- <button class="btn btn--showForm">Show Form</button> -->
         <button class="btn btn--clearAll">Clear All</button>
       </div>
     </div>
 
+    <!-- Form  -->
+    <section class="section__form">
+      <form action="#" class="form">
+        <!-- <span class="hideForm">&times;</span> -->
+        <!-- Name input -->
+        <div class="form__control">
+          <label for="name" class="form__label">Product name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Please enter product name..."
+            class="form__input"
+            required
+          />
+        </div>
+        <!-- Category input -->
+        <div class="form__control">
+          <label for="category" class="form__label">Product category</label>
+          <input
+            type="text"
+            id="category"
+            placeholder="Please enter product category..."
+            class="form__input"
+            required
+          />
+        </div>
+        <!-- Price input -->
+        <div class="form__control">
+          <label for="price" class="form__label">Product price</label>
+          <input
+            type="number"
+            id="price"
+            placeholder="Please enter product price..."
+            class="form__input"
+            required
+          />
+        </div>
+        <!-- Image input -->
+        <div class="form__control">
+          <label for="image" class="form__label">Product image</label>
+          <input
+            type="text"
+            id="image"
+            placeholder="Please enter product image..."
+            class="form__input"
+            required
+          />
+        </div>
+        <!-- Description input -->
+        <div class="form__control">
+          <label for="price" class="form__label">Product description</label>
+          <textarea
+            class="form__input"
+            placeholder="Please enter a short description..."
+            name="description"
+            id="description"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form__footer">
+          <button class="btn btn--addProduct">Add Product</button>
+          <button class="btn btn--updateProduct">Update Product</button>
+          <button class="btn btn--deleteProduct">Delete Product</button>
+          <button class="btn btn--back">Back</button>
+        </div>
+      </form>
+    <!-- </section> -->
+
+    <!-- Filter Section & Display Product -->
+    <section class="section__product">
+      <div class="row">
+        <div class="col-1-of-4">text</div>
+        <div class="col-3-of-4">text</div>
+      </div>
+    </section>
     <!-- Scripts -->
     <script src="app.js"></script>
   </body>
