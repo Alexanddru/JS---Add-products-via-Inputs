@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="app.css" />
     <title>Products - 📱</title>
   </head>
@@ -11,85 +15,125 @@
     <!-- Navigation -->
     <div class="navigation">
       <div class="container">
-        <!-- <button class="btn btn--showForm">Show Form</button> -->
+        <button class="btn btn--showCard">Show Card</button>
         <button class="btn btn--clearAll">Clear All</button>
       </div>
     </div>
 
-    <!-- Form  -->
-    <section class="section__form">
-      <form action="#" class="form">
-        <!-- <span class="hideForm">&times;</span> -->
-        <!-- Name input -->
-        <div class="form__control">
-          <label for="name" class="form__label">Product name</label>
-          <input
-            type="text"
-            id="name"
-            placeholder="Please enter product name..."
-            class="form__input"
-            required
-          />
-        </div>
-        <!-- Category input -->
-        <div class="form__control">
-          <label for="category" class="form__label">Product category</label>
-          <input
-            type="text"
-            id="category"
-            placeholder="Please enter product category..."
-            class="form__input"
-            required
-          />
-        </div>
-        <!-- Price input -->
-        <div class="form__control">
-          <label for="price" class="form__label">Product price</label>
-          <input
-            type="number"
-            id="price"
-            placeholder="Please enter product price..."
-            class="form__input"
-            required
-          />
-        </div>
-        <!-- Image input -->
-        <div class="form__control">
-          <label for="image" class="form__label">Product image</label>
-          <input
-            type="text"
-            id="image"
-            placeholder="Please enter product image..."
-            class="form__input"
-            required
-          />
-        </div>
-        <!-- Description input -->
-        <div class="form__control">
-          <label for="price" class="form__label">Product description</label>
-          <textarea
-            class="form__input"
-            placeholder="Please enter a short description..."
-            name="description"
-            id="description"
-            required
-          ></textarea>
-        </div>
+    <!-- Input fields -->
+    <div class="card">
+      <span class="hideCard">&times;</span>
+      <!-- Name input -->
+      <div class="card__control">
+        <label for="name" class="card__label">Product name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Please enter product name..."
+          class="card__input"
+          required
+        />
+      </div>
+      <!-- Category input -->
+      <div class="card__control">
+        <label for="category" class="card__label">Product category</label>
+        <input
+          type="text"
+          id="category"
+          placeholder="Please enter product category..."
+          class="card__input"
+          required
+        />
+      </div>
+      <!-- Price input -->
+      <div class="card__control">
+        <label for="price" class="card__label">Product price</label>
+        <input
+          type="number"
+          id="price"
+          placeholder="Please enter product price..."
+          class="card__input"
+          required
+        />
+      </div>
+      <!-- Image input -->
+      <div class="card__control">
+        <label for="image" class="card__label">Product image</label>
+        <input
+          type="text"
+          id="image"
+          placeholder="Please enter product image..."
+          class="card__input"
+          required
+        />
+      </div>
+      <!-- Description input -->
+      <div class="card__control">
+        <label for="price" class="card__label">Product description</label>
+        <textarea
+          class="card__input"
+          placeholder="Please enter a short description..."
+          name="description"
+          id="description"
+          required
+        ></textarea>
+      </div>
 
-        <div class="form__footer">
-          <button class="btn btn--addProduct">Add Product</button>
-          <button class="btn btn--updateProduct">Update Product</button>
-          <button class="btn btn--deleteProduct">Delete Product</button>
-          <button class="btn btn--back">Back</button>
-        </div>
-      </form>
-    <!-- </section> -->
+      <div class="card__footer">
+        <button class="btn btn--addProduct">Add Product</button>
+        <button class="btn btn--updateProduct">Update Product</button>
+        <button class="btn btn--deleteProduct">Delete Product</button>
+        <button class="btn btn--back">Back</button>
+      </div>
+    </div>
 
     <!-- Filter Section & Display Product -->
     <section class="section__product">
       <div class="row">
-        <div class="col-1-of-4">text</div>
-        <div class="col-3-of-4">text</div>
+        <div class="col-1-of-4">
+          <!-- By Name -->
+          <h3 class="heading-tertiary">Filter by name:</h3>
+          <div class="filter__name"></div>
+          <!-- By Category -->
+          <h3 class="heading-tertiary">Filter by category:</h3>
+          <div class="filter__category"></div>
+          <!-- By Price -->
+          <h3 class="heading-tertiary">Filter by price:</h3>
+          <div class="filter__price"></div>
+        </div>
+        <div class="col-3-of-4">
+          <h3 class="heading-tertiary">Products</h3>
+          <h5 class="heading-quinary">
+            The number of products in available:
+            <span id="total-number">0</span>
+          </h5>
+          <ul id="products-list">
+            <li class="product">
+              <div class="product__header">
+                <img
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.movertix.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Fimage%2F1024x%2Fs%2Fa%2Fsamsung-galaxy-a51-dual-sim-en-negro-de-128gb-y-4gb-ram-sm-a515f-ds.jpg&f=1&nofb=1"
+                  alt="Samsung Phoen a51s"
+                  class="product__image"
+                />
+              </div>
+              <div class="product__body">
+                <h5 class="heading-quinary">Product name: x</h5>
+                <h6 class="heading-senary">
+                  Product category: -
+                  <span class="product__price">Product Price: $300</span>
+                </h6>
+                <p class="product__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate repellat dolores corrupti minima. Suscipit,
+                  perferendis?
+                </p>
+                <a href="#" class="edit-state">
+                  <i class="bi bi-pencil-square"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <!-- Scripts -->

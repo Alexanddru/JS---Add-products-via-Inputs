@@ -15,12 +15,14 @@
   margin-right: 1rem;
 }
 
-.row [class^="col-"] .col-1-of-4 {
+.row .col-1-of-4 {
   width: calc((100% - 3 * 1rem) / 4);
+  background-color: yellow;
 }
 
-.row [class^="col-"] .col-3-of-4 {
-  width: calc( 3 * ((100% - 3 * 1rem) / 4)+ 2 * 1rem);
+.row .col-3-of-4 {
+  width: calc( 3 * ((100% - 3 * 1rem) / 4) + 2 * 1rem);
+  background-color: blue;
 }
 
 *,
@@ -39,6 +41,7 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
   line-height: 1.6;
   font-family: 1.5rem;
   font-family: "Roboto", sans-serif;
@@ -75,33 +78,36 @@ a {
           justify-content: end;
 }
 
-.section__form {
-  padding: 2rem 5rem;
-}
-
-.form {
-  background-color: rgba(255, 255, 255, 0.5);
-  position: relative;
+.card {
+  background-color: #ffffff;
   -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
-  width: 65%;
-  margin: 0 auto;
+  width: 55%;
   border-radius: 0.7rem;
-  padding: 2rem 3rem;
+  padding: 3rem;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  z-index: 100;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.form textarea {
+.card textarea {
   padding: 0.5rem 0 0 0.5rem;
   height: 5rem;
 }
 
-.form__control {
-  width: 90%;
+.card__control {
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 1.5rem;
 }
 
-.form__label {
+.card__label {
   display: block;
   font-size: 1.7rem;
   font-weight: 700;
@@ -109,7 +115,7 @@ a {
   margin-left: 0.5rem;
 }
 
-.form__input {
+.card__input {
   width: 100%;
   height: 3rem;
   border: none;
@@ -119,26 +125,26 @@ a {
   padding: 0 0 0 0.5rem;
 }
 
-.form__input:focus {
+.card__input:focus {
   outline: none;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   border-bottom: 2px Solid #004e7c;
 }
 
-.form__input:focus:invalid {
+.card__input:focus:invalid {
   outline: 0;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   border-bottom: 2px solid #b73225;
 }
 
-.form__input::-webkit-input-placeholder {
+.card__input::-webkit-input-placeholder {
   color: #000000;
 }
 
-.form__footer {
-  width: 90%;
+.card__footer {
+  width: 100%;
   padding: 1.5rem 0;
   margin: 0 auto;
   display: -webkit-box;
@@ -150,24 +156,55 @@ a {
   justify-items: start;
 }
 
-.form__footer .btn:not(:last-child) {
+.card__footer .btn:not(:last-child) {
   margin-right: 1.5rem;
 }
 
-.form__footer .btn--back {
+.card__footer .btn--back {
   margin-left: auto;
   background-color: #d1e2e9;
 }
 
-.form__footer .btn {
+.card__footer .btn--back:hover {
+  background-color: #dde;
+}
+
+.card__footer .btn {
   -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
   border-radius: 3rem;
   padding: 1rem 1.3rem;
 }
 
-.form:not(output):-moz-ui-invalid {
+.card:not(output):-moz-ui-invalid {
   box-shadow: none;
+}
+
+.section__product {
+  background-color: red;
+  width: 85%;
+  height: 100%;
+  margin: 5rem auto;
+  padding: 5rem;
+  font-size: 1.5rem;
+}
+
+.product {
+  max-width: 18rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  border-radius: 0.7rem;
+}
+
+.product__header {
+  border-bottom: 0.1rem solid #000000;
+}
+
+.product__image {
+  width: 100%;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
 }
 
 .btn {
@@ -177,7 +214,7 @@ a {
   text-transform: uppercase;
 }
 
-.btn--showForm {
+.btn--showCard {
   margin-right: 2rem;
   border-radius: 3rem;
   padding: 1rem 1.5rem;
@@ -185,18 +222,18 @@ a {
           box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
 }
 
-.btn--showForm:focus {
+.btn--showCard:focus {
   outline: none;
   -webkit-box-shadow: 0 0 1rem rgba(183, 50, 37, 0.4);
           box-shadow: 0 0 1rem rgba(183, 50, 37, 0.4);
 }
 
-.btn--showForm:hover {
+.btn--showCard:hover {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
 }
 
-.btn--showForm:active {
+.btn--showCard:active {
   -webkit-transform: translateY(-1.5px);
           transform: translateY(-1.5px);
 }
@@ -231,13 +268,45 @@ a {
   color: #ffffff;
 }
 
+.btn--addProduct:hover {
+  background-color: rgba(0, 78, 124, 0.8);
+}
+
 .btn--updateProduct {
   background-color: #000000;
   color: #ffffff;
 }
 
+.btn--updateProduct:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .btn--deleteProduct {
   background-color: #b73225;
   color: #ffffff;
+}
+
+.btn--deleteProduct:hover {
+  background-color: rgba(183, 50, 37, 0.8);
+}
+
+.hideCard {
+  cursor: pointer;
+  position: absolute;
+  font-size: 3rem;
+  top: 0;
+  right: 3%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.hideCard:hover, .hideCard:active {
+  -webkit-transform: rotate(359deg) scale(1.1);
+          transform: rotate(359deg) scale(1.1);
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.hideCard:focus {
+  outline: 0;
 }
 /*# sourceMappingURL=app.css.map */
